@@ -69,6 +69,10 @@ int make_set(disjoint_set_forest *f, void *data){
 
 disjoint_set_forest_node* find(disjoint_set_forest *f, void *data){
   disjoint_set_node *n = (disjoint_set_node *)linked_list_search(f->forest, data, f->cmp);
+  
+  /* if the node is not found */
+  if(n == NULL)
+    return NULL;
 
   return find_r(n);
 }
