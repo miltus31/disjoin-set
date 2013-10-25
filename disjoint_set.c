@@ -64,7 +64,7 @@ int make_set(disjoint_set_forest *f, void *data){
   n->parent = n;
   n->rank = 0;
 
-  linked_list_insert(f->forest, data);
+  linked_list_insert(f->forest, n);
 }
 
 disjoint_set_forest_node* find(disjoint_set_forest *f, void *data){
