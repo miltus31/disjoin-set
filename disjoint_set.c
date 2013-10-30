@@ -82,7 +82,7 @@ static disjoint_set_forest_node* find_r(disjoint_set_forest_node *n){
   if(n->parent != n)
     n->parent = find_r(n->parent);
 
-  return n;
+  return n->parent;
 } 
 
 /* Union by rank */
